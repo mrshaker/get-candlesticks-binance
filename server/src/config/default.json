@@ -1,0 +1,9 @@
+{
+    "development": {
+      "port": 4000,
+      "database": "candlestickDB",
+      "host": "localhost",
+      "db": "mongoDB"
+    }
+}
+  
