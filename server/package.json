@@ -4,7 +4,7 @@
   "description": "Get BTC/USDT, BTC/BNB 4000 of candlesticks on Binance.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "cryptocurrency"
@@ -12,6 +12,7 @@
   "author": "mrshaker",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^27.5.0",
     "ccxt": "^1.80.6",
     "config": "^3.3.7",
     "express": "^4.17.3",
@@ -24,7 +25,8 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.1.0",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "jest": "^28.1.0"
   },
   "engines": {
     "node": "16.13.2"

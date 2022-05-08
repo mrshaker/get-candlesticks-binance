@@ -24,9 +24,11 @@ async function getCandlesticks (symbol) {
     }
     // console.log(candlesticksBuffer)
     console.log('Numbers of candlesticks: ' + candlesticksBuffer.length)
-    return candlesticksBuffer
+    return new Promise(resolve => { resolve(candlesticksBuffer) })
   } catch (error) {
     console.log(error.message)
+    console.log('API Error')
+    throw error
   }
 }
 
@@ -56,9 +58,14 @@ function saveCandlesticks (candlesticks, symbol) {
     })
     // save candlesticks on DB
     models.saveOnDB(candlesticksArr, symbol)
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result)
+        return result
+      })
   } catch (error) {
     console.log(error.message)
+    console.log('Database Error')
+    throw error
   }
 }
 
