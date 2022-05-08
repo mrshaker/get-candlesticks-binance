@@ -3,6 +3,7 @@
 ##recive with query on GraphQL
 
 
+
 0- install mongoDB locally
 
 1- node app.js
@@ -38,3 +39,6 @@ query {
 
 
 ##created by Mrshaker
+
+## it used ESLint dependency to follow standardJS.
+## unit tests have done with JEST.
