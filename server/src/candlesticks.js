@@ -1,3 +1,5 @@
+/* eslint new-cap: ["error", { "newIsCap": false}] */
+
 const ccxt = require('ccxt')
 const models = require('./models/models')
 
@@ -7,6 +9,7 @@ const symbols = models.symbols
 // getting candlesticks from Binance with ccxt
 async function getCandlesticks (symbol) {
   try {
+    /* eslint new-cap: ["error", { "newIsCap": false}] */
     const binance = new ccxt.binance() // create binance object with ccxt.
     const timeFrame = '1h' // defining time frame for candlesticks.
     const limitFetch = 1000 // maximum number for getting candlesticks from binance exchange.
